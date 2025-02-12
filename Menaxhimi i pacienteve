@@ -3,6 +3,15 @@
 #include <string>
 using namespace std;
 
+void shfaqTeDhenat(const Pacient& pacient){
+cout <<"Te Dhenat e Pacientit:\n";
+cout <<"======================\n";
+cout <<"ID: " << pacient.ID <<"\nEmri: " << pacient.emri
+<< "\nAdresa: " << pacient.adresa <<"\nHistoria Mjeksore: " 
+<< pacient.historia_medicale << endl;
+cout << "=====================\n";
+}
+
 int main(){
 
 return 0;
