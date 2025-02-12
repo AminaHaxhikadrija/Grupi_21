@@ -16,6 +16,17 @@ cout<<"Pacienti u fshi me sukses!\n";
 fshire=true;
 break;
 }
+}
+
+if(!fshire){
+cout<<"Pacienti nuk u gjet!\n";
+}
+}
+
+void fshiTeGjithePacientet(vector<Pacient>&pacientet){
+pacientet.clear();
+cout<<"Te gjitha te dhenat per pacientet jane fshite!\n";
+}
 
 int main(){
 
