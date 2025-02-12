@@ -4,6 +4,18 @@
 using namespace std;
 
 void fshiPacient(vector<Pacient>&pacientet){
+cout<<"Shkruani ID e pacientit qe deshironi te fshini";
+int ID;
+bool fshire=false;
+cin>>ID;
+
+for(auto it==pacientet.begin();it!=pacientet.end();++it){
+if(it->ID){
+pacientet.erase(it);
+cout<<"Pacienti u fshi me sukses!\n";
+fshire=true;
+break;
+}
 
 int main(){
 
