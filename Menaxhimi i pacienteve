@@ -3,15 +3,9 @@
 #include <string>
 using namespace std;
 void kerkoPacient(vector<Pacient>& pacientet) {
-    cout << "Shkruani ID ose emrin e pacientit: ";
-    string kerkimi;
-    cin >> kerkimi;
-    bool gjetur = false;
-    for (auto& pacient : pacientet) {
-        if (to_string(pacient.ID) == kerkimi || pacient.emri == kerkimi) {
-            shfaqTeDhenat(pacient); 
-            gjetur = true;
-            break;
+   cout<<"shkruni ID ose emrin e pacientit";
+string kerkimi;
+cin>>kerkimi;
         }
     }
     if (!gjetur) {
