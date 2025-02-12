@@ -6,7 +6,6 @@ void kerkoPacient(vector<Pacient>& pacientet) {
     cout << "Shkruani ID ose emrin e pacientit: ";
     string kerkimi;
     cin >> kerkimi;  // Merr input-in nga përdoruesi
-
     bool gjetur = false;
     for (auto& pacient : pacientet) {
         if (to_string(pacient.ID) == kerkimi || pacient.emri == kerkimi) {
@@ -15,7 +14,6 @@ void kerkoPacient(vector<Pacient>& pacientet) {
             break;
         }
     }
-
     if (!gjetur) {
         cout << "Pacienti nuk u gjet!\n";  // Mesazh nëse pacienti nuk u gjet
     }
