@@ -3,6 +3,16 @@
 #include <string>
 using namespace std;
 
+struct Pacient{
+int ID;
+string emri;
+string adresa;
+string historia_medicale;
+
+Pacient(int id,string e,string a,string h) : ID(id),emri(e), adresa(a); historia_medicale(h) {}
+
+}
+
 int main(){
 
 return 0;
