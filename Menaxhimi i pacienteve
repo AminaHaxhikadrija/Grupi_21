@@ -5,24 +5,24 @@ using namespace std;
 void kerkoPacient(vector<Pacient>& pacientet) {
     cout << "Shkruani ID ose emrin e pacientit: ";
     string kerkimi;
-    cin >> kerkimi;  // Merr input-in nga përdoruesi
+    cin >> kerkimi;
     bool gjetur = false;
     for (auto& pacient : pacientet) {
         if (to_string(pacient.ID) == kerkimi || pacient.emri == kerkimi) {
-            shfaqTeDhenat(pacient);  // Shfaq informacionin e pacientit
+            shfaqTeDhenat(pacient); 
             gjetur = true;
             break;
         }
     }
     if (!gjetur) {
-        cout << "Pacienti nuk u gjet!\n";  // Mesazh nëse pacienti nuk u gjet
+        cout << "Pacienti nuk u gjet!\n"; 
     }
 }
 void kerkoPacientPerAdrese(const vector<Pacient>& pacientet, const string& adresa) {
     bool gjetur = false;
     for (const auto& pacient : pacientet) {
         if (pacient.adresa == adresa) {
-            shfaqTeDhenat(pacient);  // Shfaq pacientët që kanë adresën e kërkuar
+            shfaqTeDhenat(pacient); 
             gjetur = true;
         }
     }
