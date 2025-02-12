@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+void fshiPacient(vector<Pacient>&pacientet){
+
 int main(){
 
 return 0;
