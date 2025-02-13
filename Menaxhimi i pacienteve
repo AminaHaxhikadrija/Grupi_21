@@ -9,7 +9,7 @@ cin>>kerkimi;
 }
     }
     if (!gjetur) {
-        cout << "Pacienti nuk u gjet!\n"; 
+cout << "Pacienti nuk u gjet!\n"; 
     }
 }
 void kerkoPacientPerAdrese(const vector<Pacient>& pacientet, const string& adresa) {
