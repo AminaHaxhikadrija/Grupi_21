@@ -25,7 +25,7 @@ cout<<"Pacienti nuk u gjet!\n";
 
 void fshiTeGjithePacientet(vector<Pacient>&pacientet){
 pacientet.clear();
-cout<<"Te gjitha te dhenat per pacientet jane fshite!\n";
+cout<<"Te gjitha te dhenat per pacientet jane fshire!\n";
 }
 
 int main(){
