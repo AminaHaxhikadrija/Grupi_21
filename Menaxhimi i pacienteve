@@ -2,6 +2,29 @@
 #include <vector>
 #include <string>
 using namespace std;
+
+void kerkoPacient(vector<Pacient>& pacientet) {
+cout<<"shkruni ID ose emrin e pacientit";
+string kerkimi;
+cin>>kerkimi;
+}
+    }
+    if (!gjetur) {
+cout << "Pacienti nuk u gjet!\n"; 
+    }
+}
+void kerkoPacientPerAdrese(const vector<Pacient>& pacientet, const string& adresa) {
+    bool gjetur = false;
+    for (const auto& pacient : pacientet) {
+        if (pacient.adresa == adresa) {
+            shfaqTeDhenat(pacient); 
+            gjetur = true;
+        }
+    }
+    if (!gjetur) {
+        cout << "Nuk ka paciente me kete adrese.\n";
+    }
+
  
 struct Pacient{
 int ID;
@@ -20,11 +43,11 @@ cout<<"ID: " << ID <<"\nEmri: " <<emri
 
 void shfaqTeDhenat(const Pacient& pacient){
 cout <<"Te Dhenat e Pacientit:\n";
-cout <<"======================\n";
+cout <<"\n";
 cout <<"ID: " << pacient.ID <<"\nEmri: " << pacient.emri
 << "\nAdresa: " << pacient.adresa <<"\nHistoria Mjeksore: " 
 << pacient.historia_medicale << endl;
-cout << "=====================\n";
+cout << "\n";
 }
 
 void shtoPacient(vector<Pacient>& pacientet){
@@ -68,8 +91,6 @@ cout<<"Pacienti nuk u gjet!\n";
 void fshiTeGjithePacientet(vector<Pacient>&pacientet){
 pacientet.clear();
 cout<<"Te gjitha te dhenat per pacientet jane fshire!\n";
-}
-
 int main(){
 vector<Pacient>pacientet;
 
