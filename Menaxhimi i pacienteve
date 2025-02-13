@@ -12,10 +12,10 @@ string historia_medicale;
 Pacient(int id,string e,string a,string h) : ID(id),emri(e), adresa(a); historia_medicale(h) {}
 
 void shfaqTeDhenat() const {
-cout<<"ID: " << ID <<"\n Emri: " <<emri
-<<"\nAdresa: " << adresa <<"\nHistoria Mjeksore: "
-<< historia_medicale << endl;
-}
+cout<<"ID: " << ID <<"\nEmri: " <<emri
+    <<"\nAdresa: " << adresa <<"\nHistoria Mjeksore: "
+    << historia_medicale << endl;
+} 
 };
 
 int main(){
