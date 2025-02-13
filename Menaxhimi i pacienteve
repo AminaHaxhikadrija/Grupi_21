@@ -3,10 +3,10 @@
 #include <string>
 using namespace std;
 void kerkoPacient(vector<Pacient>& pacientet) {
-   cout<<"shkruni ID ose emrin e pacientit";
+cout<<"shkruni ID ose emrin e pacientit";
 string kerkimi;
 cin>>kerkimi;
-        }
+}
     }
     if (!gjetur) {
         cout << "Pacienti nuk u gjet!\n"; 
