@@ -14,6 +14,7 @@ Ky projekt është një program i thjeshtë për menaxhimin e të dhënave të p
 
 ## Bllokdiagrami i kodit
 
+![Image](https://github.com/user-attachments/assets/c8909fb8-f35c-4767-a6fd-ab972864fb35)
 
 ## Përdorimi
 
@@ -32,6 +33,7 @@ Programi do të shfaqë një menu me opsionet e mëposhtme:
 
 ## Shembull i Ndërveprimit:
 
+![Image](https://github.com/user-attachments/assets/2b39a9f1-7b49-4cb6-8531-28c7e8261930)
 
 ## Kontributi
 
