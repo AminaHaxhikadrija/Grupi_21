@@ -2,8 +2,55 @@
 #include <vector>
 #include <string>
 using namespace std;
+ 
+struct Pacient{
+int ID;
+string emri;
+string adresa;
+string historia_medicale;
+
+Pacient(int id,string e,string a,string h) : ID(id),emri(e), adresa(a); historia_medicale(h) {}
+
+void shfaqTeDhenat() const { 
+cout<<"ID: " << ID <<"\nEmri: " <<emri
+    <<"\nAdresa: " << adresa <<"\nHistoria Mjeksore: "
+    << historia_medicale << endl;
+} 
+};
 
 int main(){
+vector<Pacient>pacientet;
 
+int zgjedhja;
+do{
+//menyja e opsioneve per perdoruesin
+cout << "Zgjedhni nje opsion:\n";
+cout << "1.Shto pacient\n";
+cout << "2.Kerko pacientin\n";
+cout << "3.Shfaq te dhenat per secilin pacient\n";
+cout << "4.Fshi pacientin\n";
+cout << "5.Fshi te gjithe pacientet\n";
+cout << "6.Dalje\n";
+cout << "Zgjedhja juaj: ";
+cin >> zgjedhja;
+
+if(zgjedhja == 1){
+  shtoPacient(oacientet); //shto nje pacient te ri
+}
+else if (zgjedhja == 2){
+   kerkoPacient(pacientet); //kerko pacientin
+}
+else if ( zgjedhja == 3){
+for ( const auto& pacient : pacientet ){
+    shfaqTeDhenat(pacient); //shfaq te dhenat per te gjithe pacientet
+   }
+}
+else if ( zgjedhja == 4 ){
+   fshiPacient(pacientet); //fshi pacientin
+}
+else if ( zgjedhja == 5 ){
+  fshiTeGjithePacientet(pacientet); //fshi te gjithe pacientet
+   }
+} while (zgjedhja !=6 ); //vazhdoni derisa perdoruesi te zgjedh daljen
 return 0;
 }
