@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 using namespace std;
+
 void kerkoPacient(vector<Pacient>& pacientet) {
 cout<<"shkruni ID ose emrin e pacientit";
 string kerkimi;
@@ -23,9 +24,106 @@ void kerkoPacientPerAdrese(const vector<Pacient>& pacientet, const string& adres
     if (!gjetur) {
         cout << "Nuk ka paciente me kete adrese.\n";
     }
+
+ 
+struct Pacient{
+int ID;
+string emri;
+string adresa;
+string historia_medicale;
+
+Pacient(int id,string e,string a,string h) : ID(id),emri(e), adresa(a); historia_medicale(h) {}
+
+void shfaqTeDhenat() const { 
+cout<<"ID: " << ID <<"\nEmri: " <<emri
+    <<"\nAdresa: " << adresa <<"\nHistoria Mjeksore: "
+    << historia_medicale << endl;
+} 
+};
+
+void shfaqTeDhenat(const Pacient& pacient){
+cout <<"Te Dhenat e Pacientit:\n";
+cout <<"\n";
+cout <<"ID: " << pacient.ID <<"\nEmri: " << pacient.emri
+<< "\nAdresa: " << pacient.adresa <<"\nHistoria Mjeksore: " 
+<< pacient.historia_medicale << endl;
+cout << "\n";
 }
 
-int main(){
+void shtoPacient(vector<Pacient>& pacientet){
+int id;
+string emri, adresa, historia;
+cout <<"Shkruani ID e pacientit: ";
+cin >> id;
+cin.ignore(); // Per te hequr karakterin e mbetur te newline
+cout << "Shkruani emrin e pacientit: ";
+getline(cin,emri);
+cout << "Shkruani adresen e pacientit: ";
+getline(cin,adresa);
+cout << "Shkruani historine mjekesore te pacientit: ";
+getline(cin,historia);
 
+pacientet.push_back(Pacient(id,emri,adresa,historia));
+cout << "Pacienti u shtua me sukses!\n";
+
+}
+
+void fshiPacient(vector<Pacient>&pacientet){
+cout<<"Shkruani ID e pacientit qe deshironi te fshini";
+int ID;
+bool fshire=false;
+cin>>ID;
+
+for(auto it==pacientet.begin();it!=pacientet.end();++it){
+if(it->ID){
+pacientet.erase(it);
+cout<<"Pacienti u fshi me sukses!\n";
+fshire=true;
+break;
+}
+}
+
+if(!fshire){
+cout<<"Pacienti nuk u gjet!\n";
+}
+}
+
+void fshiTeGjithePacientet(vector<Pacient>&pacientet){
+pacientet.clear();
+cout<<"Te gjitha te dhenat per pacientet jane fshire!\n";
+int main(){
+vector<Pacient>pacientet;
+
+int zgjedhja;
+do{
+//menyja e opsioneve per perdoruesin
+cout << "Zgjedhni nje opsion:\n";
+cout << "1.Shto pacient\n";
+cout << "2.Kerko pacientin\n";
+cout << "3.Shfaq te dhenat per secilin pacient\n";
+cout << "4.Fshi pacientin\n";
+cout << "5.Fshi te gjithe pacientet\n";
+cout << "6.Dalje\n";
+cout << "Zgjedhja juaj: ";
+cin >> zgjedhja;
+
+if(zgjedhja == 1){
+  shtoPacient(oacientet); //shto nje pacient te ri
+}
+else if (zgjedhja == 2){
+   kerkoPacient(pacientet); //kerko pacientin
+}
+else if ( zgjedhja == 3){
+for ( const auto& pacient : pacientet ){
+    shfaqTeDhenat(pacient); //shfaq te dhenat per te gjithe pacientet
+   }
+}
+else if ( zgjedhja == 4 ){
+   fshiPacient(pacientet); //fshi pacientin
+}
+else if ( zgjedhja == 5 ){
+  fshiTeGjithePacientet(pacientet); //fshi te gjithe pacientet
+   }
+} while (zgjedhja !=6 ); //vazhdoni derisa perdoruesi te zgjedh daljen
 return 0;
 }
