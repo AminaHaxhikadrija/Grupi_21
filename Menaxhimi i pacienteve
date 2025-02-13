@@ -18,6 +18,33 @@ cout<<"ID: " << ID <<"\nEmri: " <<emri
 } 
 };
 
+void shfaqTeDhenat(const Pacient& pacient){
+cout <<"Te Dhenat e Pacientit:\n";
+cout <<"======================\n";
+cout <<"ID: " << pacient.ID <<"\nEmri: " << pacient.emri
+<< "\nAdresa: " << pacient.adresa <<"\nHistoria Mjeksore: " 
+<< pacient.historia_medicale << endl;
+cout << "=====================\n";
+}
+
+void shtoPacient(vector<Pacient>& pacientet){
+int id;
+string emri, adresa, historia;
+cout <<"Shkruani ID e pacientit: ";
+cin >> id;
+cin.ignore(); // Per te hequr karakterin e mbetur te newline
+cout << "Shkruani emrin e pacientit: ";
+getline(cin,emri);
+cout << "Shkruani adresen e pacientit: ";
+getline(cin,adresa);
+cout << "Shkruani historine mjekesore te pacientit: ";
+getline(cin,historia);
+
+pacientet.push_back(Pacient(id,emri,adresa,historia));
+cout << "Pacienti u shtua me sukses!\n";
+
+}
+
 int main(){
 vector<Pacient>pacientet;
 
