@@ -2,29 +2,6 @@
 #include <vector>
 #include <string>
 using namespace std;
-
-void kerkoPacient(vector<Pacient>& pacientet) {
-cout<<"shkruni ID ose emrin e pacientit";
-string kerkimi;
-cin>>kerkimi;
-}
-    }
-    if (!gjetur) {
-cout << "Pacienti nuk u gjet!\n"; 
-    }
-}
-void kerkoPacientPerAdrese(const vector<Pacient>& pacientet, const string& adresa) {
-    bool gjetur = false;
-    for (const auto& pacient : pacientet) {
-        if (pacient.adresa == adresa) {
-            shfaqTeDhenat(pacient); 
-            gjetur = true;
-        }
-    }
-    if (!gjetur) {
-        cout << "Nuk ka paciente me kete adrese.\n";
-    }
-
  
 struct Pacient{
 int ID;
@@ -66,6 +43,37 @@ getline(cin,historia);
 pacientet.push_back(Pacient(id,emri,adresa,historia));
 cout << "Pacienti u shtua me sukses!\n";
 
+}
+
+void kerkoPacient(vector<Pacient>& pacientet) {
+cout<<"Shkruni ID ose emrin e pacientit: ";
+string kerkimi;
+cin>>kerkimi;
+
+bool gjetur = false;
+for (auto& pacient : pacient) {
+if (to_string(pacient.ID) == kerkimi || pacient.emri == kerkimi){
+shfaqTeDhenat(pacient);
+gjetur = true;
+break;
+}
+}
+if (!gjetur) {
+cout << "Pacienti nuk u gjet!\n"; 
+    }
+}
+
+void kerkoPacientPerAdrese(const vector<Pacient>& pacientet, const string& adresa) {
+    bool gjetur = false;
+    for (const auto& pacient : pacientet) {
+        if (pacient.adresa == adresa) {
+            shfaqTeDhenat(pacient); 
+            gjetur = true;
+        }
+    }
+    if (!gjetur) {
+        cout << "Nuk ka paciente me kete adrese.\n";
+    }
 }
 
 void fshiPacient(vector<Pacient>&pacientet){
