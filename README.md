@@ -2,7 +2,7 @@
 
 ## Është një sistem për menaxhimin e të dhënave të pacientëve, ku përdoruesi mund të shtojë, kërkojë, shfaqë dhe fshijë pacientë nga një lista.
 
-Ky projekt është një program i thjeshtë për menaxhimin e të dhënave të pacientëve. Ai lejon përdoruesin të kryej operacione të ndryshme si shtimi, kërkimi, shfaqja dhe fshirja e të dhënave të pacientëve, sistemi ruan informacionin për pacientin si ID, emri, adresa dhe historia meësore.
+Ky projekt është një program i thjeshtë për menaxhimin e të dhënave të pacientëve. Ai lejon përdoruesin të kryej veprime të ndryshme si shtimi, kërkimi, shfaqja dhe fshirja e të dhënave të pacientëve, sistemi ruan informacionin për pacientin si ID, emri, adresa dhe historia meësore.
 
 ## Karakteristikat
 
